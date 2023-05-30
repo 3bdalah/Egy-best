@@ -92,7 +92,8 @@ async function displayPopularShows() {
 // display movie details 
 async function displayMovieDetails(){
   const movieId = window.location.search.split('=')[1];
-  const movie = await fetchMovie(`movie/${movieId}`);
+  console.log('movie id', movieId);
+  const movie = await fetchAPIData(`movie/${movieId}`);
   const div = document.createElement('div');
   div.innerHTML = `
   <div class="details-top">
@@ -205,7 +206,7 @@ function init(){
       displayPopularShows();
       break;
     case  '/movie-details.html':
-      console.log("movie details");
+      displayMovieDetails();
       break;
     case '/tv-details.html':
       console.log("tv Details");
