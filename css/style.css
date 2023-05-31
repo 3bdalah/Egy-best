@@ -9,6 +9,8 @@
 :root {
   --color-primary: #020d18;
   --color-secondary: #f1c40f;
+  --color-logo-first :#FF2300;
+  --color-logo-second: #0066CC;
 }
 
 body {
@@ -20,7 +22,7 @@ body {
 }
 
 a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
 }
 
@@ -87,14 +89,21 @@ ul {
 
 .main-header {
   padding: 20px 0;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(255, 255, 255, 1);
 }
 
 .main-header .logo {
-  color: #fff;
+  /* color: #fff; */
   font-size: 25px;
   font-weight: 700;
   text-transform: uppercase;
+  /* color: var(--color-logo-second); */
+}
+.main-header .logo .egy{
+  color :var(--color-logo-second)
+}
+.main-header .logo .best{
+  color: var(--color-logo-first);
 }
 
 .main-header ul {
